@@ -16,6 +16,8 @@ public class SistemaEscolar {
      */
     public static void main(String[] args) {
         System.out.println("Bem Vindo");
+        System.out.println("Bem Vindo2");
+        System.out.println("Bem Vindo3");
     }
     
 }
