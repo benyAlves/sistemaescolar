@@ -29,9 +29,9 @@ public class Instituicao implements  Serializable{
   @Column(nullable = false,unique = false)
   private String nome;
   @Column(nullable = false,unique = false)
-  private String  site;
+  private String site;
   @Column(unique = false)
-  private String  fax;
+  private String fax;
 
   @OneToOne
   @JoinColumn(name = "cod_endereco")
