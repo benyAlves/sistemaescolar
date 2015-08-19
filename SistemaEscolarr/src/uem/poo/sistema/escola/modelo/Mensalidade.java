@@ -6,20 +6,33 @@
 package uem.poo.sistema.escola.modelo;
 
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
  * @author claucio
  */
+@Entity
 public class Mensalidade {
-    
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long codigo;
+    @Temporal(TemporalType.DATE)
     private Date dataVencimento;
+    @Temporal(TemporalType.DATE)
     private Date dataPagamento;
+    @Column(nullable = false)
     private double valorApagar;
+    @Column(nullable = false)
     private double valorPago;
 
     public Mensalidade(Date dataVencimento, Date dataPagamento, double valorApagar, double valorPago) {
+        
         this.dataVencimento = dataVencimento;
         this.dataPagamento = dataPagamento;
         this.valorApagar = valorApagar;
