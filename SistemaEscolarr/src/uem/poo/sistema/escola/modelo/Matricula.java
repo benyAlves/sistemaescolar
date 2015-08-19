@@ -6,10 +6,13 @@
 package uem.poo.sistema.escola.modelo;
 
 import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -19,9 +22,13 @@ import javax.persistence.Id;
 public class Matricula {
    @Id @GeneratedValue(strategy = GenerationType.AUTO)
    private Long nr_aluno;
+    @Temporal(TemporalType.DATE)
    private Date dataMatricula;
+   @Column(name = "valor", nullable = false, unique = false)
    private Double valor;
+   @Column(nullable = true)
    private String observacao;
+   @Column(nullable = false,unique = false)
    private String estado;
 
     public Long getNr_aluno() {
