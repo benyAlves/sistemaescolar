@@ -69,8 +69,8 @@ public class Matricula {
 
     public void setEstado(String estado) {
         this.estado = estado;
-    }
-
+    }    
+    
     
     
 }
